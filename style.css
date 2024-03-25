@@ -1,0 +1,66 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background-color: #000478;
+}
+
+.container {
+  background: white;
+  margin: 20px auto;
+  display: block;
+  width: 50%;
+}
+
+h1 {
+  padding: 16px;
+  padding-top: 40px;
+}
+
+form {
+  height: 33vw;
+  text-align: center;
+}
+
+button {
+  font-size: 16px;
+  padding: 12px 92px;
+  color: white;
+  margin: 15px;
+  font-weight: bold;
+  background: rgb(16%, 15%, 91%);
+  border-radius: 10px;
+  border-style: none;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}
+input {
+  padding: 6px;
+  margin-bottom: 4px;
+  margin: 10px;
+  width: 60%;
+}
+
+.input_control input:focus {
+  outline: 0;
+}
+.input_control.success input {
+  border-color: #09c372;
+}
+
+.input_control.error input {
+  margin-bottom: 4px;
+  border-color: #ff3860;
+}
+
+.input_control .error {
+  color: #ff3860;
+  font-size: 16px;
+
+  margin-bottom: 10px;
+}
