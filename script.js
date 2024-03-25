@@ -28,7 +28,7 @@ const setSuccess = (element) => {
 const validEmail = (email) => {
   const re =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(string(email).toLowerCase());
+  return re.test(String(email).toLowerCase());
 };
 
 const validateInputs = () => {
@@ -44,13 +44,17 @@ const validateInputs = () => {
   }
 
   if (emailValue === "") {
-    setError(email, "Name is required");
+    setError(email, "Email is required");
+  } else if (!validEmail(emailValue)) {
+    setError(email, "Email is not valid");
   } else {
     setSuccess(email);
   }
 
   if (passwordValue === "") {
-    setError(password, "Name is required");
+    setError(password, "Password is required");
+  } else if (passwordValue.length < 8) {
+    setError(password, "Password length must be greater then 8");
   } else {
     setSuccess(password);
   }
